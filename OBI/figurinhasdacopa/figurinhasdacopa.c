@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
 // a primeira linha contém 3 número inteiros
-int N, C, M, igual = 0, F;
+int N, C, M, igual = 0, F, comp;
 // N indica número de figurinhas (e espaços) do álbum
 // C indica número de figurinhas carimbadas do álbum 
 // M indica número de figurinhas já compradas
@@ -33,11 +33,22 @@ if (x[i]==y[j]){
 igual = igual + 1;
 
 }
-}
-}
-F = C - igual;
-printf("%d\n", F);
 	/* code */
+}
+
+
+}
+
+if (igual > C){
+igual = 0;
+printf("%d\n", igual);
+}else{
+F = C - igual;
+printf ( "%d\n" , F);
+}
+
+//preciso contar, mas tem um problema, se tiver mais 
+//repetido, ele vai fazer a subtraçãoe vai ficar um numero negativo.
 
 
 //A segunda linha contém C números inteiros distintos
@@ -50,6 +61,17 @@ printf("%d\n", F);
 	
 	return 0;
 }
+
+	/* code */
+
+
+//A segunda linha contém C números inteiros distintos
+// Xi indicando as figurinhas carimbadas do álbum
+
+
+//A terceira linha contém M números inteiros Yi
+// indicando as figurinhas já compradas.
+
 
 
 // o álbum contém espaços numerados de 1 a N
