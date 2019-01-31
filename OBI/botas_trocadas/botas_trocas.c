@@ -20,11 +20,15 @@ scanf("%s", &L[i]);
 }
 
 for (int k = 0; k < N; ++k){
-	for (int q = 0; q < N; ++q)
+	if (M[k] == 0) {
+		continue;
+	}
+	for (int q = k+1; q < N; ++q)
 	{
 	 if ((M[k]==M[q])&&(L[k]!=L[q]))
 	 {
-	 botas_pares = botas_pares + 1;
+	 	M[q] = 0;
+	 	botas_pares = botas_pares + 1;
 	 }
 	}
 }
