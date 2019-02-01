@@ -20,7 +20,10 @@ scanf("%s", &L[i]);
 }
 
 for (int k = 0; k < N; ++k){
+//esse for é capaz de parar de fazer comparaçoes
+// com o que ja foi feito
 	if (M[k] == 0) {
+
 		continue;
 	}
 	for (int q = k+1; q < N; ++q)
