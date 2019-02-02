@@ -16,7 +16,6 @@ scanf("%d", &X[i]);
 scanf("%d", &Y[i]);
 scanf("%d", &Z[i]);
 
-
 }
  
 for (int j = 0; j < M; ++j)
