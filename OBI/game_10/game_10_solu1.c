@@ -5,18 +5,24 @@ int main()
 	int N;
 	int D;
 	int A;
-	int resp;
+	int resp = 0;
 
 	scanf("%d", &N);
 	scanf("%d", &D);
 	scanf("%d", &A);
+    
+    if (D==A){
+    printf("%d\n", resp);
 
-	if (D > A){
+    }
+	else if(D > A){
     resp = D - A;
+    printf("%d\n", resp);
 	}else{
-	resp = N - A + D;
+	resp = (N - A) + D;
+	printf("%d\n", resp);
 	}
 
-	printf("%d\n", resp);
+	
 	return 0;
 }

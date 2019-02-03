@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 
@@ -22,17 +23,24 @@ scanf("%s", &L[i]);
 for (int k = 0; k < N; ++k){
 //esse for é capaz de parar de fazer comparaçoes
 // com o que ja foi feito
-	if (M[k] == 0) {
 
-		continue;
-	}
-	for (int q = k+1; q < N; ++q)
+	
+	for (int q = 0; q < N; ++q)
 	{
+    
+	if ((M[k]&&M[q]!=0)&&((L[k]&&L[q]!='o')))
+	{
+		
 	 if ((M[k]==M[q])&&(L[k]!=L[q]))
 	 {
 	 	M[q] = 0;
+	 	M[k] = 0;
+	 	L[k] = 'o';
+	 	L[q] = 'o';
 	 	botas_pares = botas_pares + 1;
 	 }
+	}
+	
 	}
 }
 
@@ -42,7 +50,8 @@ printf("%d\n", botas_pares);
 /*
 for (int j = 0; j < N; ++j){
 printf("%d %c\n", M[j], L[j]);
-*/
 
+}
+*/
 	return 0;
 }
