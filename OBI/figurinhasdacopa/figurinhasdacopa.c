@@ -5,7 +5,7 @@ int N, C, M, igual = 0, F, comp;
 // N indica número de figurinhas (e espaços) do álbum
 // C indica número de figurinhas carimbadas do álbum 
 // M indica número de figurinhas já compradas
-printf("digite:\n");
+
 
 scanf("%d%d%d", &N, &C, &M);
 

@@ -24,23 +24,25 @@ for (int k = 0; k < N; ++k){
 //esse for é capaz de parar de fazer comparaçoes
 // com o que ja foi feito
 
+
+
+if ((M[k]!=0)&&((L[k]!='o')))
+	{
 	
-	for (int q = 0; q < N; ++q)
-	{
+	for (int q = k+1; q < N; ++q){
     
-	if ((M[k]&&M[q]!=0)&&((L[k]&&L[q]!='o')))
-	{
+	if ((M[q]!=0)&&((L[q]!='o'))){
 		
 	 if ((M[k]==M[q])&&(L[k]!=L[q]))
 	 {
 	 	M[q] = 0;
 	 	M[k] = 0;
-	 	L[k] = 'o';
-	 	L[q] = 'o';
+	 	
 	 	botas_pares = botas_pares + 1;
+
 	 }
 	}
-	
+	}
 	}
 }
 
